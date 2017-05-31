@@ -39,7 +39,7 @@
 
 
     <style type="text/css">
-      
+      /* TEMA 1 */
       <?php if (isset($_SESSION["tema"]) && $_SESSION["tema"]== 1):?>
         body {
           /*background-color: white;*/
@@ -48,6 +48,27 @@
         }
         .navbar-default {
           border:1px solid green;
+        }
+
+      <?php endif;?>
+
+      /* TEMA 2 */
+      <?php if (isset($_SESSION["tema"]) && $_SESSION["tema"]== 2):?>
+        body {
+          background-color: black;
+          color:white;
+          font-family: times;
+        }
+        .navbar-default {
+          border:2px solid gray;
+        }
+      <?php endif;?>
+
+      /* TEMA 3 */
+      <?php if (isset($_SESSION["tema"]) && $_SESSION["tema"]== 3):?>
+
+        .container {
+          width: 90%;
         }
 
       <?php endif;?>
