@@ -37,6 +37,23 @@
     <script src="../js/ie-emulation-modes-warning.js"></script>
 
 
+
+    <style type="text/css">
+      
+      <?php if (isset($_SESSION["tema"]) && $_SESSION["tema"]== 1):?>
+        body {
+          /*background-color: white;*/
+          color:green;
+          font-family: courier;
+        }
+        .navbar-default {
+          border:1px solid green;
+        }
+
+      <?php endif;?>
+
+    </style>
+
   </head>
 
   <body>
