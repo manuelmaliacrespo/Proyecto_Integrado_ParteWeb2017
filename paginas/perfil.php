@@ -79,6 +79,7 @@ if (!isset($_SESSION["email"])) {
       <option value="0" <?php if($_SESSION['tema'] == 0){echo "selected";}?>>Por defecto</option>
       <option value="1" <?php if($_SESSION['tema'] == 1){echo "selected";}?>>Perfil 1</option>
       <option value="2" <?php if($_SESSION['tema'] == 2){echo "selected";}?>>Perfil 2</option>
+      <option value="3" <?php if($_SESSION['tema'] == 3){echo "selected";}?>>Perfil 3</option>
     </select></p>
 
     <p><input type="submit" value="Editar mis datos" class="btn btn-primary" name="editar_usuario"></p>

@@ -62,6 +62,12 @@
         .navbar-default {
           border:2px solid gray;
         }
+        input {
+          color:black;
+        }
+        select {
+          color:black;
+        }
       <?php endif;?>
 
       /* TEMA 3 */
