@@ -78,6 +78,7 @@ if($_SESSION["rol"] != "admin") {
 
               echo "</table>";
 
+                echo '<img src="../librerias/jpgraph/reservas.php"></img>';
 
               }
           } else {

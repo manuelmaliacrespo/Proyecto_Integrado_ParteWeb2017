@@ -9,7 +9,7 @@
 
   <div align="">
     <h3 align="center">Actividades</h3><br>
-
+    <a href="/proyecto/librerias/fpdf/pdf_actividades.php">Exportar PDF</a>
     <?php
 
 

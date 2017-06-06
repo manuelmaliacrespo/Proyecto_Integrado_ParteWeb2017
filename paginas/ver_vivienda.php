@@ -97,6 +97,10 @@ if ($connection->connect_errno) {
 
             echo '</form>';
 
+            
+    
+            
+
           }
       } else {
         echo "Wrong Query";

@@ -1,20 +1,10 @@
 <?php
   session_start();
-  //Siempre se ha de empezar con session start.
-  /*echo "$ _SESSION";
-  echo "<pre>";
-  echo var_dump($_SESSION);
-  echo "</pre>";
+  
 
-  echo "$ _POST";
-  echo "<pre>";
-  echo var_dump($_POST);
-  echo "</pre>";
+  /*require('librerias/fpdf/fpdf.php');*/
 
-  echo "$ _GET";
-  echo "<pre>";
-  echo var_dump($_GET);
-  echo "</pre>";*/
+
 ?>
 
 
