@@ -8,11 +8,11 @@ $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
 
 
 
-if($result = $connection->query("select nombre, count(*) as cantidad from reservas 
+if($result = $connection->query("select estado, count(*) as cantidad from reservas 
 left join viviendas on viviendas.id_vivienda=reservas.id_vivienda 
-GROUP BY reservas.id_vivienda")) {
+GROUP BY estado")) {
   while($obj = $result->fetch_object()) {
-    $label[]=$obj->nombre;
+    $label[]=$obj->estado;
     $datos[]=$obj->cantidad;
   }
 }

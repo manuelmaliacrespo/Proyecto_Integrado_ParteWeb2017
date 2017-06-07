@@ -78,7 +78,7 @@ if($_SESSION["rol"] != "admin") {
 
               echo "</table>";
 
-                echo '<img src="../librerias/jpgraph/reservas.php"></img>';
+                echo '<img src="../librerias/jpgraph/reservas.php"></img><img src="../librerias/jpgraph/reservas_estados.php"></img>';
 
               }
           } else {
