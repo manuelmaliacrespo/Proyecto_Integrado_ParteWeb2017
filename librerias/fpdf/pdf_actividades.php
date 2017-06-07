@@ -2,10 +2,21 @@
 <?php
 require('fpdf.php');
 
-$pdf = new FPDF('P','mm','A4');
-$pdf->AddPage();
-$pdf->SetFont('Arial','B',12);
-$pdf->SetMargins(30, 25 , 30); 
+
+$connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+
+$pdf = new FPDF();
+$pdf -> AddPage();
+$pdf -> SetFont('Arial', '', 14);
+$pdf -> Cell(165, 10, 'TRAFALGAR ERES TU', 0);
+
+$pdf -> Ln(15);
+
+$pdf -> Cell(70, 8, 'Actividad', 0);
+$pdf -> Cell(40, 8, 'Precio', 0);
+$pdf -> Ln(8);
+$pdf -> SetFont('Arial', '', 9);
+
 
           $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
           //Conexion a la base de datos (localhost, usuario, contraseña, bd).
@@ -23,31 +34,20 @@ $pdf->SetMargins(30, 25 , 30);
           if ($result = $connection->query($consulta)) {
 
               if ($result->num_rows===0) {
-              //Si el resultado es = 0 que me muestre que no hay actividades.
                 echo "Sin extras";
               } else {
-                //Pintame la tabla.
-
-
+              
 
                 while($obj = $result->fetch_object()) {
        				
        			
-                     $pdf->Cell(40,5,$obj->actividad);
-                     $pdf->Ln();
-                     $pdf->Cell(40,5,$obj->descripcion);
-                     $pdf->Ln();
-                        /*echo "<p><b>Actividad:</b> ".$obj->actividad."</p>";
-                        echo "<p><b>Precio:</b> ".$obj->precio." €</p>";
-                        echo "<p><b>Descripción:</b> ".$obj->descripcion."</p>";*/
-               
-
+                        $pdf -> SetFont('Arial', '', 9);
+                        $pdf -> Cell(70, 8, utf8_decode($obj->actividad), 0);
+                        $pdf -> Cell(40, 8, utf8_decode($obj->precio), 0);
+                        $pdf -> Ln(8);
 
 
                 };
-
-
-
 
 
               }
@@ -58,3 +58,5 @@ $pdf->SetMargins(30, 25 , 30);
 
 $pdf->Output();
 ?>
+
+
