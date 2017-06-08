@@ -22,7 +22,7 @@ if($_SESSION["rol"] != "admin") {
 //SI HACE CLIC EN EL EDITAR
     if (isset($_POST["editar_viviendas"])) {
     //Si existe el campo registro...
-      $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+      $connection = new mysqli($host, $usuario, $clave, $nombre);
       //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
       if ($connection->connect_errno) {
@@ -72,7 +72,7 @@ if($_SESSION["rol"] != "admin") {
 //VIENE DE VIVIENDAS.PHP RELLENAMOS EL FORMULARIO CON LOS DATOS DE LA VIVIENDA.
 if (isset($_GET["editar"])) {
 
-  $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+  $connection = new mysqli($host, $usuario, $clave, $nombre);
   //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
   $consulta = "select * from viviendas where id_vivienda=".$_GET["editar"]."";

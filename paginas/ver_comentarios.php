@@ -5,7 +5,7 @@
 
 <?php
 
-$connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+$connection = new mysqli($host, $usuario, $clave, $nombre);
 //Conexion a la base de datos.
 
 if ($connection->connect_errno) {
@@ -81,7 +81,7 @@ if ($connection->connect_errno) {
     if (isset($_POST["comentar_vivienda"])) {
     //Si existe petición $_POST comentar_vivienda (name = formulario)
 
-      $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+      $connection = new mysqli($host, $usuario, $clave, $nombre);
       //Conexion base de datos
 
       if ($connection->connect_errno) {

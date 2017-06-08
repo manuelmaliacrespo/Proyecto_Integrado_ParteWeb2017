@@ -20,7 +20,7 @@ if($_SESSION["rol"] != "admin") {
 //SI HACE CLIC EN EL EDITAR
     if (isset($_POST["editar_extras"])) {
     //Si existe el campo editar_extras...
-      $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+      $connection = new mysqli($host, $usuario, $clave, $nombre);
       //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
       if ($connection->connect_errno) {
@@ -58,7 +58,7 @@ if($_SESSION["rol"] != "admin") {
 //VENGO DE EXTRAS.PHP (Nos trae por GET el id_extras que queremos editar) RELLENAMOS EL FORMULARIO CON LOS DATOS DEL USUARIO.
 if (isset($_GET["editar"])) {
 
-  $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+  $connection = new mysqli($host, $usuario, $clave, $nombre);
   //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
   $consulta = "select * from extras where id_extras=".$_GET["editar"]."";

@@ -20,7 +20,7 @@ if($_SESSION["rol"] != "admin") {
 //SI HACE CLIC EN EL EDITAR
     if (isset($_POST["editar_reservas"])) {
     //Si existe el campo reserva...
-      $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+      $connection = new mysqli($host, $usuario, $clave, $nombre);
       //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
       if ($connection->connect_errno) {
@@ -62,7 +62,7 @@ if($_SESSION["rol"] != "admin") {
 //1º VIENE DE RESERVAS.PHP RELLENAMOS EL FORMULARIO CON LOS DATOS DEL USUARIO.
 if (isset($_GET["editar"])) {
 
-  $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+  $connection = new mysqli($host, $usuario, $clave, $nombre);
   //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
   $consulta = "select * from reservas where id_reserva=".$_GET["editar"]."";

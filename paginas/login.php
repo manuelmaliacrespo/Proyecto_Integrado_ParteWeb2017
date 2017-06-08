@@ -12,7 +12,7 @@
         //Si esxiste el login (name= formulario) por $ POST conectarse a la base de datos.
         if (isset($_POST["login"])) {
           //CREATING THE CONNECTION
-          $connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+          $connection = new mysqli($host, $usuario, $clave, $nombre);
           //Conexion a la base de datos (localhost, usuario, contraseña, bd).
 
           if ($connection->connect_errno) {

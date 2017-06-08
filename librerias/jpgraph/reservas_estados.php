@@ -4,7 +4,7 @@ require_once('jpgraph/jpgraph.php');
 require_once('jpgraph/jpgraph_bar.php');
 
 
-$connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+$connection = new mysqli($host, $usuario, $clave, $nombre);
 
 
 

@@ -5,7 +5,7 @@
 
 <?php
 //ABRIMOS CONEXIÓN A LA BASE DE DATOS.
-$connection = new mysqli("localhost", "mmalia", "123456", "proyecto");
+$connection = new mysqli($host, $usuario, $clave, $nombre);
 
 if ($connection->connect_errno) {
   printf("Connection failed: %s\n", $connection->connect_error);
