@@ -73,7 +73,7 @@ if ($connection->connect_errno) {
 
 <br><br>
 
-
+<h4><a href="../librerias/fpdf/pdf_viviendas.php">Exportar Viviendas</a></h4>
 
 <!-- MOSTRANDO VIVIENDAS -->
 <?php
