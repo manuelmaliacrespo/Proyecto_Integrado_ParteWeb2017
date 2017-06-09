@@ -2,7 +2,7 @@
 <?php
 require('fpdf.php');
 
-
+include('../../configuracion.php');
 $connection = new mysqli($host, $usuario, $clave, $nombre);
 
 $pdf = new FPDF();

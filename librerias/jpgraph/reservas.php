@@ -4,6 +4,9 @@ require_once('jpgraph/jpgraph.php');
 require_once('jpgraph/jpgraph_bar.php');
 
 
+
+include('../../configuracion.php');
+
 $connection = new mysqli($host, $usuario, $clave, $nombre);
 
 

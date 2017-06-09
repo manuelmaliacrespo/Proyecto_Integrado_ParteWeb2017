@@ -2,7 +2,7 @@
   session_start();
   
 
-  /*require('librerias/fpdf/fpdf.php');*/
+  require('configuracion.php');
 
 
 ?>
