@@ -237,7 +237,8 @@ $_GET["paso"] = 1;
 		      values ('".$_POST["email"]."', md5('".$_POST["clave"]."'), '".$_POST["nombre"]."', '".$_POST["apellidos"]."', '".$_POST["dni"]."', 'admin')";
 
 	      	if ($result = $connection->query($consulta)) {
-	            $_GET["paso"]=3;
+	            $_GET["paso"]=2;
+	            header('Location: paginas/index.php');
 
 	      	} else {
 	      		$_GET["paso"]=2;
@@ -313,17 +314,6 @@ $_GET["paso"] = 1;
 	<?php endif; ?>
 
 
-
-
-
-
-
-
-
-	<!-- PASO 3 -->
-	<?php if($_GET["paso"]==3): ?>
-		
-	<?php endif; ?>
 
 </div>
 
