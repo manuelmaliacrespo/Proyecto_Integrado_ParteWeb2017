@@ -1,5 +1,4 @@
-<?php 
-// Archivo de configuración
+<?php
 $nombre='proyecto';
 $host='localhost';
 $usuario='mmalia';
